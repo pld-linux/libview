@@ -1,0 +1,39 @@
+diff -burN libview-0.5.5.orig/libview/header.cc libview-0.5.5/libview/header.cc
+--- libview-0.5.5.orig/libview/header.cc	2005-12-11 03:18:42.089466232 +0100
++++ libview-0.5.5/libview/header.cc	2005-12-11 03:21:01.540266488 +0100
+@@ -69,6 +69,22 @@
+    select();
+ }
+ 
++/*
++ * one parameter constructor for compatiblity with VMware
++ */
++Header::Header(const Glib::ustring &markup) 
++	: Gtk::MenuItem(),
++	mLabel()
++{
++   mLabel.show();
++   add(mLabel);
++   mLabel.set_alignment(0, 0.5);   
++   mLabel.set_justify(Gtk::JUSTIFY_LEFT);
++
++   SetMarkup(markup);
++
++   select();
++}
+ 
+ /*
+  *-----------------------------------------------------------------------------
+diff -burN libview-0.5.5.orig/libview/header.hh libview-0.5.5/libview/header.hh
+--- libview-0.5.5.orig/libview/header.hh	2005-12-11 03:18:42.072468816 +0100
++++ libview-0.5.5/libview/header.hh	2005-12-11 03:28:15.719261248 +0100
+@@ -44,7 +44,8 @@
+ public:
+    enum Alignment { LEFT, CENTER, RIGHT };
+ 
+-   Header(const Glib::ustring &markup, Alignment align = LEFT);
++   Header(const Glib::ustring &markup, Alignment align);
++   Header(const Glib::ustring &markup);
+ 
+    void SetMarkup(const Glib::ustring &markup);
+    void SetAlignment(Alignment align);
