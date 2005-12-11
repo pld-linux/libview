@@ -13,6 +13,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtkmm-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
