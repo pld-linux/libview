@@ -1,5 +1,5 @@
-Summary:	a collection of widgets for VMware (but not only)
-Summary(pl):	zestaw widgetów dla VMware (ale nie tylko)
+Summary:	A collection of widgets for VMware (but not only)
+Summary(pl):	Zestaw widgetów dla VMware (ale nie tylko)
 Name:		libview
 Version:	0.5.5
 Release:	1
@@ -9,10 +9,10 @@ Source0:	http://dl.sourceforge.net/view/%{name}-%{version}.tar.bz2
 # Source0-md5:	3125e73865e7a76ffe1024cafe6d6573
 Patch0:		%{name}-constructor.patch
 URL:		http://view.sourceforge.net/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gtkmm-devel
-BuildRequires:	libtool
+BuildRequires:	gtkmm-devel >= 2.4.0
+BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,14 +22,15 @@ relased at MIT license so that open source community can use it.
 
 %description -l pl
 libview to zestaw widgetów stworzonych do u¿ytku z VMware ale
-udostêpnionych na otwartej licencji (MIT) tak aby spo³eczno¶æ
-opensource mog³a z nich skorzystaæ.
+udostêpnionych na otwartej licencji (MIT), aby spo³eczno¶æ opensource
+mog³a z nich skorzystaæ.
 
 %package devel
 Summary:	Header files for libview library
 Summary(pl):	Pliki nag³ówkowe biblioteki libview
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtkmm-devel >= 2.4.0
 
 %description devel
 Header files for libview library.
