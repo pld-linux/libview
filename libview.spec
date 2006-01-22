@@ -1,12 +1,12 @@
 Summary:	A collection of widgets for VMware (but not only)
 Summary(pl):	Zestaw widgetów dla VMware (ale nie tylko)
 Name:		libview
-Version:	0.5.5
-Release:	2
+Version:	0.5.6
+Release:	1
 License:	MIT
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/view/%{name}-%{version}.tar.bz2
-# Source0-md5:	3125e73865e7a76ffe1024cafe6d6573
+# Source0-md5:	0ecfe713f2a523a337c43b87f564cb00
 Patch0:		%{name}-constructor.patch
 URL:		http://view.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
