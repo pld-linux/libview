@@ -1,5 +1,5 @@
 Summary:	A collection of widgets for VMware (but not only)
-Summary(pl):	Zestaw widgetÛw dla VMware (ale nie tylko)
+Summary(pl.UTF-8):   Zestaw widget√≥w dla VMware (ale nie tylko)
 Name:		libview
 Version:	0.5.6
 Release:	1
@@ -20,14 +20,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 libview is a collection of widgets that were developed for use VMware
 relased at MIT license so that open source community can use it.
 
-%description -l pl
-libview to zestaw widgetÛw stworzonych do uøytku z VMware ale
-udostÍpnionych na otwartej licencji (MIT), aby spo≥eczno∂Ê opensource
-mog≥a z nich skorzystaÊ.
+%description -l pl.UTF-8
+libview to zestaw widget√≥w stworzonych do u≈ºytku z VMware ale
+udostƒôpnionych na otwartej licencji (MIT), aby spo≈Çeczno≈õƒá opensource
+mog≈Ça z nich skorzystaƒá.
 
 %package devel
 Summary:	Header files for libview library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libview
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libview
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.4.0
@@ -35,19 +35,19 @@ Requires:	gtkmm-devel >= 2.4.0
 %description devel
 Header files for libview library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libview.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libview.
 
 %package static
 Summary:	Static libview library
-Summary(pl):	Statyczna biblioteka libview
+Summary(pl.UTF-8):   Statyczna biblioteka libview
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libview library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libview.
 
 %prep
