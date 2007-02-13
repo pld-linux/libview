@@ -1,5 +1,5 @@
 Summary:	A collection of widgets for VMware (but not only)
-Summary(pl.UTF-8):   Zestaw widgetów dla VMware (ale nie tylko)
+Summary(pl.UTF-8):	Zestaw widgetów dla VMware (ale nie tylko)
 Name:		libview
 Version:	0.5.6
 Release:	1
@@ -27,7 +27,7 @@ mogła z nich skorzystać.
 
 %package devel
 Summary:	Header files for libview library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libview
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libview
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.4.0
@@ -40,7 +40,7 @@ Pliki nagłówkowe biblioteki libview.
 
 %package static
 Summary:	Static libview library
-Summary(pl.UTF-8):   Statyczna biblioteka libview
+Summary(pl.UTF-8):	Statyczna biblioteka libview
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
