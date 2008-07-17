@@ -1,0 +1,10 @@
+--- libview-0.6.2/configure.ac.orig	2008-06-17 02:25:22.000000000 +0200
++++ libview-0.6.2/configure.ac	2008-07-17 22:30:13.210044764 +0200
+@@ -43,6 +43,7 @@
+ dnl ################################################################
+ AC_PROG_CC
+ AC_PROG_CPP
++AC_PROG_CXX
+ AC_PROG_MAKE_SET
+ AC_PROG_LN_S
+ AC_PROG_INSTALL
