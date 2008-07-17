@@ -1,13 +1,14 @@
 Summary:	A collection of widgets for VMware (but not only)
 Summary(pl.UTF-8):	Zestaw widgetów dla VMware (ale nie tylko)
 Name:		libview
-Version:	0.5.6
+Version:	0.6.2
 Release:	1
 License:	MIT
-Group:		Libraries
+Group:		X11/Libraries
 Source0:	http://dl.sourceforge.net/view/%{name}-%{version}.tar.bz2
-# Source0-md5:	0ecfe713f2a523a337c43b87f564cb00
+# Source0-md5:	81942c6765a6be4a9706f45ad4f9ceaf
 Patch0:		%{name}-constructor.patch
+Patch1:		%{name}-ac.patch
 URL:		http://view.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -28,7 +29,7 @@ mogła z nich skorzystać.
 %package devel
 Summary:	Header files for libview library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libview
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	gtkmm-devel >= 2.4.0
 
@@ -41,7 +42,7 @@ Pliki nagłówkowe biblioteki libview.
 %package static
 Summary:	Static libview library
 Summary(pl.UTF-8):	Statyczna biblioteka libview
-Group:		Development/Libraries
+Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
@@ -53,6 +54,7 @@ Statyczna biblioteka libview.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__libtoolize}
@@ -78,15 +80,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libview.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libview.so.2
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%attr(755,root,root) %{_libdir}/libview.so
+%{_libdir}/libview.la
 %{_includedir}/libview
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/libview.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libview.a
