@@ -1,17 +1,18 @@
 Summary:	A collection of widgets for VMware (but not only)
 Summary(pl.UTF-8):	Zestaw widgetów dla VMware (ale nie tylko)
 Name:		libview
-Version:	0.6.4
-Release:	4
+Version:	0.6.6
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://dl.sourceforge.net/view/%{name}-%{version}.tar.gz
-# Source0-md5:	e917f9c33e83e55e20d52fe251278c84
+Source0:	http://downloads.sourceforge.net/view/%{name}-%{version}.tar.bz2
+# Source0-md5:	12b0a1e03013ae315d5f9088261d4f2b
 Patch0:		%{name}-constructor.patch
 Patch1:		%{name}-pc.patch
 URL:		http://view.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	gtk+2-devel >= 2.4.0
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
@@ -71,6 +72,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -86,7 +89,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libview.so
-%{_libdir}/libview.la
 %{_includedir}/libview
 %{_pkgconfigdir}/libview.pc
 
