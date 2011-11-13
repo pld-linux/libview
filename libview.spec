@@ -12,10 +12,12 @@ Patch1:		%{name}-pc.patch
 URL:		http://view.sourceforge.net/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.4.0
+BuildRequires:	gtk+2-devel >= 2:2.4.0
 BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
+Requires:	gtk+2 >= 2:2.4.0
+Requires:	gtkmm >= 2:2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,6 +34,7 @@ Summary:	Header files for libview library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libview
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Requires:	gtk+2-devel >= 2:2.4.0
 Requires:	gtkmm-devel >= 2.4.0
 
 %description devel
