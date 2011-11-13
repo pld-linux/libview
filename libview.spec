@@ -17,7 +17,7 @@ BuildRequires:	gtkmm-devel >= 2.4.0
 BuildRequires:	libtool >= 2:1.5
 BuildRequires:	pkgconfig
 Requires:	gtk+2 >= 2:2.4.0
-Requires:	gtkmm >= 2:2.4.0
+Requires:	gtkmm >= 2.4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
