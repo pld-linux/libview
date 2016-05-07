@@ -2,7 +2,7 @@ Summary:	A collection of widgets for VMware (but not only)
 Summary(pl.UTF-8):	Zestaw widgetów dla VMware (ale nie tylko)
 Name:		libview
 Version:	0.6.6
-Release:	3
+Release:	4
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://downloads.sourceforge.net/view/%{name}-%{version}.tar.bz2
@@ -66,6 +66,8 @@ Statyczna biblioteka libview.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
+export CFLAGS="%{rpmcflags} -std=c++11"
+export CXXFLAGS="%{rpmcxxflags} -std=c++11"
 %configure
 %{__make}
 
